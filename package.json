@@ -48,7 +48,8 @@
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "@babel/plugin-proposal-private-property-in-object": "^4.3.1"
   },
   "homepage": "https://gazijarin.com"
 }
