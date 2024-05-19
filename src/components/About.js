@@ -19,7 +19,7 @@ class About extends React.Component {
   render() {
     const one = (
       <p>
-        I am currently a <b>Software Development Engineer</b> at
+        I am currently a <b>Cloud Engineer</b> at
         <a href="https://www.aboutamazon.com/"> Amazon</a>, working in the AWS
         sector under team Route 53. At the same time, I am undertaking a
         part-time <b> Master's of Science</b> in <b>Software Engineering </b>at{" "}

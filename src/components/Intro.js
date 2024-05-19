@@ -29,7 +29,7 @@ class Intro extends React.Component {
         <Typist avgTypingDelay={120}>
           <span className="intro-title">
             {"hi, "}
-            <span className="intro-name">{"gazi"}</span>
+            <span className="intro-name">{"Chalitha"}</span>
             {" here."}
           </span>
         </Typist>
@@ -41,7 +41,7 @@ class Intro extends React.Component {
             industry-leading services as well as apps that have 100M+ installs.
           </div>
           <a
-            href="mailto:gazijarin@gmail.com"
+            href="mailto:chalithalh@gmail.com"
             className="intro-contact"
           >
             <EmailRoundedIcon></EmailRoundedIcon>
