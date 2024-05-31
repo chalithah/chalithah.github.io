@@ -1,11 +1,4 @@
-# Project dependencies
-.cache
-node_modules
-yarn-error.log
-package-lock.json
-
-# Build directory
-/public
+_site
+.sass-cache
 .DS_Store
-
-.vscode/
+_vendor
