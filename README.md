@@ -1,2 +1,0 @@
-# chalithah.github.io
-website
