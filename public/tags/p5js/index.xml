@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P5js on Chalitha Handapangoda</title>
+    <link>https://chalithah.github.io/tags/p5js/</link>
+    <description>Recent content in P5js on Chalitha Handapangoda</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chalithah.github.io/tags/p5js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sketches!</title>
+      <link>https://chalithah.github.io/content/en/post/sketches/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/content/en/post/sketches/</guid>
+      <description>&lt;p&gt;Sketches are the pretty visualizations in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;&amp;rsquo;s sidebar. The default ones were built using &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; &amp;ndash; a javascript library for creative coding.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sketches!</title>
+      <link>https://chalithah.github.io/content/pt-br/post/sketechs/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/content/pt-br/post/sketechs/</guid>
+      <description>&lt;p&gt;Sketches são as visualizações na barra lateral do &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;. As disponíveis no momento foram construídas usando &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; &amp;ndash; uma biblioteca de javascript para programação criativa.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sketches!</title>
+      <link>https://chalithah.github.io/en/post/sketches/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/sketches/</guid>
+      <description>&lt;p&gt;Sketches are the pretty visualizations in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;&amp;rsquo;s sidebar. The default ones were built using &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; &amp;ndash; a javascript library for creative coding.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sketches!</title>
+      <link>https://chalithah.github.io/pt-br/post/sketechs/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/post/sketechs/</guid>
+      <description>&lt;p&gt;Sketches são as visualizações na barra lateral do &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;. As disponíveis no momento foram construídas usando &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; &amp;ndash; uma biblioteca de javascript para programação criativa.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

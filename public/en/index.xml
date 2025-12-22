@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ens on Chalitha Handapangoda</title>
+    <link>https://chalithah.github.io/en/</link>
+    <description>Recent content in Ens on Chalitha Handapangoda</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chalithah.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CJK Glyphs</title>
+      <link>https://chalithah.github.io/en/post/cjk/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/cjk/</guid>
+      <description>&lt;p&gt;Test post for CJK Glyphs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Custom JavaScript and CSS</title>
+      <link>https://chalithah.github.io/en/post/custom/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/custom/</guid>
+      <description>&lt;p&gt;With custom CSS and JavaScript you can change pretty much anything in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; appearance or functionality, and it&amp;rsquo;s pretty simple, too!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://chalithah.github.io/en/post/markdown-syntax/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sketches!</title>
+      <link>https://chalithah.github.io/en/post/sketches/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/sketches/</guid>
+      <description>&lt;p&gt;Sketches are the pretty visualizations in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;&amp;rsquo;s sidebar. The default ones were built using &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; &amp;ndash; a javascript library for creative coding.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post Thumbnail</title>
+      <link>https://chalithah.github.io/en/post/thumbnail/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/thumbnail/</guid>
+      <description>&lt;p&gt;You can now add thumbnails to your posts in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Callout shortcode</title>
+      <link>https://chalithah.github.io/en/post/callouts/</link>
+      <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/callouts/</guid>
+      <description>&lt;p&gt;Check it out, &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; has callouts now!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Table of Contents</title>
+      <link>https://chalithah.github.io/en/post/toc/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/toc/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; we can use the sidebar to display a Table of Contents!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rendering Math Stuff</title>
+      <link>https://chalithah.github.io/en/post/rendering-math-stuff/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/rendering-math-stuff/</guid>
+      <description>&lt;p&gt;This article shows how to configure your site with &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; theme to display $\LaTeX$.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://chalithah.github.io/en/about/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/about/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; is a responsive, minimalist, and pretty theme built for &lt;a href=&#34;https://gohugo.io/&#34;&gt;hugo&lt;/a&gt;, based on Alexander Bilz&amp;rsquo;s &lt;a href=&#34;https://github.com/lxndrblz/anatole&#34;&gt;Anatole&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Dark theme&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/post/thumbnail/&#34;&gt;Cover images&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/post/sketches/&#34;&gt;Pretty visualizations&lt;/a&gt; in the sidebar&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/post/sketches/post/toc/&#34;&gt;Table of Contents&lt;/a&gt; in the sidebar&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/post/callouts/&#34;&gt;Callout shortcode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/post/badges/&#34;&gt;Badges shortcode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/post/custom/&#34;&gt;Support for custom CSS and JS&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://gohugo.io/content-management/multilingual/&#34;&gt;Multilingual support&lt;/a&gt; (english and brazilian portuguese, for now)&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://gohugo.io/templates/internal/#configure-open-graph&#34;&gt;Open Graph&lt;/a&gt; support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;quickstart&#34;&gt;Quickstart&lt;/h1&gt;&#xA;&lt;p&gt;To try the &lt;code&gt;exampleSite&lt;/code&gt; you just need to:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/LucasVadilho/heyo-hugo-theme heyo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd heyo/exampleSite &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hugo server --themesDir ../..&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;live-preview&#34;&gt;Live preview&lt;/h1&gt;&#xA;&lt;p&gt;You can check a live preview at &lt;a href=&#34;http://heyo-theme.oioipio.com/&#34;&gt;heyo-theme.oioipio.com&lt;/a&gt;. Also, scan the QR code if you want to preview on mobile!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Badges</title>
+      <link>https://chalithah.github.io/en/post/badges/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/en/post/badges/</guid>
+      <description>&lt;p&gt;This article will show you how to add and customize badges in your posts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

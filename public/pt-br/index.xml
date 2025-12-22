@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pt-Brs on Chalitha Handapangoda</title>
+    <link>https://chalithah.github.io/pt-br/</link>
+    <description>Recent content in Pt-Brs on Chalitha Handapangoda</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chalithah.github.io/pt-br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sketches!</title>
+      <link>https://chalithah.github.io/pt-br/post/sketechs/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/post/sketechs/</guid>
+      <description>&lt;p&gt;Sketches são as visualizações na barra lateral do &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;. As disponíveis no momento foram construídas usando &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; &amp;ndash; uma biblioteca de javascript para programação criativa.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thumbnail no post</title>
+      <link>https://chalithah.github.io/pt-br/post/thumbnail/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/post/thumbnail/</guid>
+      <description>&lt;p&gt;Agora você pode adicionar thumbnails no seu post!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shortcode para callouts</title>
+      <link>https://chalithah.github.io/pt-br/post/callouts/</link>
+      <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/post/callouts/</guid>
+      <description>&lt;p&gt;Olha só, &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; tem &lt;em&gt;callouts&lt;/em&gt; agora!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Índice</title>
+      <link>https://chalithah.github.io/pt-br/post/indice/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/post/indice/</guid>
+      <description>&lt;p&gt;No &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; podemos usar a barra da esquerda para mostrar um índice do post!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Renderizando Matemática</title>
+      <link>https://chalithah.github.io/pt-br/post/renderizando-matematica/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/post/renderizando-matematica/</guid>
+      <description>&lt;p&gt;Esse artigo mostra como configurar seu site com o &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; para mostrar matemática formatada com $\LaTeX$.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Insígnias</title>
+      <link>https://chalithah.github.io/pt-br/post/badges/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/post/badges/</guid>
+      <description>&lt;p&gt;Esse artigo mostra como adicionar e customizar insígnias (&lt;em&gt;badges&lt;/em&gt;) em seus posts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sobre</title>
+      <link>https://chalithah.github.io/pt-br/about/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://chalithah.github.io/pt-br/about/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; é um tema responsivo, minimalista e bonito para hugo. Ele foi baseado no &lt;a href=&#34;https://github.com/lxndrblz/anatole&#34;&gt;Anatole&lt;/a&gt; de Alexander Bilz.&lt;/p&gt;&#xA;&lt;h1 id=&#34;features&#34;&gt;Features&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/pt-br/post/thumbnail/&#34;&gt;Imagens de capa&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/pt-br/post/sketches/&#34;&gt;Visualizações&lt;/a&gt; in the sidebar&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/pt-br/post/sketches/post/toc/&#34;&gt;Índices&lt;/a&gt; in the sidebar&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://heyo-theme.oioipio.com/post/pt-br/callouts/&#34;&gt;Callout shortcode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;http://localhost:1313/pt-br/post/badges/&#34;&gt;Badges shortcode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Tema escuro&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Suporte para CSS e JS customizados&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Suporte para &lt;a href=&#34;https://gohugo.io/content-management/multilingual/&#34;&gt;Multilinguas&lt;/a&gt; (inglês e pt-br, por enquanto)&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://gohugo.io/templates/internal/#configure-open-graph&#34;&gt;Open Graph&lt;/a&gt; support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;quickstart&#34;&gt;Quickstart&lt;/h1&gt;&#xA;&lt;p&gt;Para testar o &lt;code&gt;exampleSite&lt;/code&gt; é só:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/LucasVadilho/heyo-hugo-theme heyo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd heyo/exampleSite &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hugo server --themesDir ../..&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;ao-vivo&#34;&gt;Ao vivo&lt;/h1&gt;&#xA;&lt;p&gt;Dá pra checar uma versão ao vivo em &lt;a href=&#34;http://heyo-theme.oioipio.com/&#34;&gt;heyo-theme.oioipio.com&lt;/a&gt;. Também pode scannear o QR code ao lado para ver a versão mobile!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,4 @@
+baseURL = 'https://chalithah.github.io/'
+languageCode = 'en-us'
+title = 'Chalitha Handapangoda'
+theme = 'heyo'
