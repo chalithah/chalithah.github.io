@@ -1,39 +1,32 @@
-# heyo ![LICENSE](https://badgen.net/github/license/LucasVadilho/heyo-hugo-theme?icon=github&label=&color=grey) [![SUPPORT](https://badgen.net/static/kofi/Buy%20me%20a%20coffee%20%E2%9D%A4%ef%b8%8f?icon=kofi&label=&color=grey)](https://ko-fi.com/oioipio)
+# Portfolio
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/7459017/261717800-0741de5d-0b5e-4439-a04d-7523c44e3030.gif)
+My personal portfolio website showcasing research in AI Safety and Machine Learning.
 
-heyo is a responsive, minimalist, and pretty theme built for [hugo](https://gohugo.io/), based on Alexander Bilz's [Anatole](https://github.com/lxndrblz/anatole).
+**Live site:** [jrosser.co.uk](https://jrosseruk.github.io)
 
-## Features
+## Preview
 
-- [x] Dark theme
-- [x] [Cover images](https://heyo-theme.oioipio.com/post/thumbnail/)
-- [x] [Pretty visualizations](https://heyo-theme.oioipio.com/post/sketches/) in the sidebar
-- [x] [Table of Contents](https://heyo-theme.oioipio.com/post/sketches/post/toc/) in the sidebar
-- [x] [Callout shortcode](https://heyo-theme.oioipio.com/post/callouts/)
-- [x] [Badges shortcode](https://heyo-theme.oioipio.com/post/badges/)
-- [x] [Support for custom CSS and JS](https://heyo-theme.oioipio.com/post/custom/)
-- [x] [Multilingual support](https://gohugo.io/content-management/multilingual/) (english and brazilian portuguese, for now)
-- [x] [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph) support
+![Portfolio Screenshot](docs/assets/screenshot.png)
 
-# Quickstart
 
-To try the `exampleSite` you just need to:
+## Tech Stack
 
-```sh
-git clone https://github.com/LucasVadilho/heyo-hugo-theme heyo
-cd heyo/exampleSite && hugo server --themesDir ../..
+- Vanilla HTML, CSS, JavaScript
+- Markdown content
+- GitHub Pages hosting
+
+## Development
+
+```bash
+# Serve locally
+python -m http.server 8000 -d docs/
 ```
-<img align="right" width="200" alt="scan me to preview on mobile" src="https://github.com/LucasVadilho/heyo-hugo-theme/assets/7459017/6642e5b9-9b90-460c-9d45-18ae94bb5a6e"/>
 
-# Live preview
+## Structure
 
-You can check a live preview at [heyo-theme.oioipio.com](http://heyo-theme.oioipio.com/). Also, scan the QR code if you want to preview on mobile!
+- `docs/index.html` - Main page
+- `docs/*.md` - Content (about, publications, resume)
+- `docs/styles.css` - Styling
+- `docs/script.js` - Functionality
 
-# Credits & thanks
-
-- 🖼️ All the images in `exampleSite` were graciously provided by TD Vadilho, you can check his work on the [website](https://www.tdvadilho.com?utm_source=heyo) and [YouTube](https://www.youtube.com/channel/UCu4GsGZTk3wqYWbYhfo3rzw)!
-- 🔡 Fonts!
-  - Computer Modern from [CTAN](https://ctan.org/pkg/cm-unicode) (SIL Open Font License)
-  - FandolKai-Regular from [CTAN](https://ctan.org/tex-archive/fonts/fandol) (GNU General Public License)
-- 🍍 Thanks to Alex Bilz, for the original [Anatole](https://github.com/lxndrblz/anatole)
+Inspired by [astro-theme-cactus](https://astro-cactus.chriswilliams.dev/) :)
