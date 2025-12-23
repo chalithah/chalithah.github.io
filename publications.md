@@ -54,7 +54,7 @@
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://github.com/chalithah/redcap-aws-cloudformation" class="publication-link">
+            <a href="https://github.com/chalithah/Securing-REDCap-OWASP-AWS-WAF" class="publication-link">
                 Cloud Defense: Mitigating Live DDoS Attacks
             </a>
         </h3>
@@ -66,7 +66,7 @@
         <div class="publication-tags">
             <span class="tag tag-safety">Cloud Security</span>
             <span class="tag tag-interpretability">DDoS Mitigation</span>
-            <a href="https://github.com/chalithah/redcap-aws-cloudformation" class="tag tag-github">GITHUB</a>
+            <a href="https://github.com/chalithah/Securing-REDCap-OWASP-AWS-WAF" class="tag tag-github">GITHUB</a>
         </div>
     </div>
 </div>
@@ -100,7 +100,7 @@
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://github.com/chalithah/tpot-honeypot-analysis" class="publication-link">
+            <a href="https://github.com/chalithah/T-Pot-Honeypot-Cloud-Deployment" class="publication-link">
                 Cloud Threat Intel: T-Pot Honeypot Analysis
             </a>
         </h3>
@@ -112,7 +112,7 @@
         <div class="publication-tags">
             <span class="tag tag-safety">Threat Intelligence</span>
             <span class="tag tag-interpretability">Big Data Analysis</span>
-            <a href="https://github.com/chalithah/tpot-honeypot-analysis" class="tag tag-github">GITHUB</a>
+            <a href="https://github.com/chalithah/T-Pot-Honeypot-Cloud-Deployment" class="tag tag-github">GITHUB</a>
         </div>
     </div>
 </div>
