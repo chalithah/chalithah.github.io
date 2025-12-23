@@ -59,7 +59,7 @@
             </a>
         </h3>
         <div class="publication-venue">AWS WAF · AWS Shield · Fortinet Managed Rules</div>
-        <div class="publication-year">2025</div>
+        <div class="publication-year">2024</div>
         <div class="publication-description">
             Real-world incident response: Secured REDCap web application on AWS under active DDoS attack. Implemented AWS WAF with Fortinet Managed Rules to block OWASP Top 10 exploits (SQLi, XSS), stabilized HTTP 4xx error rates, and reduced malicious traffic. Integrated AWS Shield for volumetric attack mitigation and GuardDuty for continuous threat monitoring.
         </div>
@@ -105,7 +105,7 @@
             </a>
         </h3>
         <div class="publication-venue">T-Pot · Elastic Stack (ELK) · Kibana</div>
-        <div class="publication-year">2025</div>
+        <div class="publication-year">2024</div>
         <div class="publication-description">
             Deployed high-interaction honeypot on Vultr cloud to capture 4+ million real-world cyberattacks over 30 days. Analyzed global threat patterns using Elastic Stack, identifying credential stuffing campaigns, C2 callbacks, and exploit attempts targeting SSH/FTP/HTTP. Documented top attacker ASNs, common credentials, and malicious payloads for threat intelligence enrichment.
         </div>
