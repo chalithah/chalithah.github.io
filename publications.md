@@ -48,64 +48,71 @@
     </div>
 </div>
 
-
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/AgentBreederDiagramJPG.jpg" alt="AgentBreeder publication">
+        <img src="assets/aws-waf-architecture.png" alt="AWS WAF DDoS Mitigation">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="/AgentBreeder" class="publication-link">
-                AgentBreeder: Mitigating the AI Safety Impact of Multi-Agent Scaffolds via Self-Improvement
+            <a href="https://github.com/chalithah/redcap-aws-cloudformation" class="publication-link">
+                Cloud Defense: Mitigating Live DDoS Attacks
             </a>
         </h3>
-        <div class="publication-venue">NeurIPS 2025 spotlight</div>
-        <div class="publication-authors">J Rosser, Jakob Foerster</div>
+        <div class="publication-venue">AWS WAF · AWS Shield · Fortinet Managed Rules</div>
         <div class="publication-year">2025</div>
+        <div class="publication-description">
+            Real-world incident response: Secured REDCap web application on AWS under active DDoS attack. Implemented AWS WAF with Fortinet Managed Rules to block OWASP Top 10 exploits (SQLi, XSS), stabilized HTTP 4xx error rates, and reduced malicious traffic. Integrated AWS Shield for volumetric attack mitigation and GuardDuty for continuous threat monitoring.
+        </div>
         <div class="publication-tags">
-            <span class="tag tag-safety">Multi-Agent Safety</span>
-            <a href="https://arxiv.org/abs/2502.00757" class="tag tag-arxiv">ARXIV</a>
-            <a href="https://github.com/J-Rosser-UK/AgentBreeder" class="tag tag-github">GITHUB</a>
+            <span class="tag tag-safety">Cloud Security</span>
+            <span class="tag tag-interpretability">DDoS Mitigation</span>
+            <a href="https://github.com/chalithah/redcap-aws-cloudformation" class="tag tag-github">GITHUB</a>
         </div>
     </div>
 </div>
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/stream_jpg.jpg" alt="Stream publication">
+        <img src="assets/splunk-claude-mcp.png" alt="AI Security Analyst">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://openreview.net/pdf?id=5HGu0ZqBl9" class="publication-link">
-                Stream: Scaling Mechanistic Interpretability to Long Context in LLMs via Sparse Attention
+            <a href="https://github.com/chalithah/splunk-claude-mcp-agent" class="publication-link">
+                AI Security Analyst: Splunk & Claude Integration
             </a>
         </h3>
-        <div class="publication-venue">NeurIPS 2025 Mech Interp Workshop</div>
-        <div class="publication-authors">J Rosser, José Luis Redondo García, Gustavo Penha, Konstantina Palla, Hugues Bouchard</div>
+        <div class="publication-venue">Python · Anthropic API · Splunk SDK · MCP</div>
         <div class="publication-year">2025</div>
+        <div class="publication-description">
+            Engineered a local Model Context Protocol (MCP) server bridging Claude AI with Splunk Enterprise for natural language threat hunting. The agent writes SPL queries, executes searches, and analyzes results without uploading sensitive data to the cloud. Successfully identified credential dumping attacks (Mimikatz/T1003) and Windows Defender evasion techniques through conversational AI interaction.
+        </div>
         <div class="publication-tags">
-            <span class="tag tag-safety">Mechanistic Interpretability</span>
-            <a href="https://openreview.net/pdf?id=5HGu0ZqBl9" class="tag tag-arxiv">ARXIV</a>
+            <span class="tag tag-safety">AI Engineering</span>
+            <span class="tag tag-interpretability">Security Automation</span>
+            <a href="https://github.com/chalithah/splunk-claude-mcp-agent" class="tag tag-github">GITHUB</a>
         </div>
     </div>
 </div>
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/mapping_faithful.jpg" alt="Mapping Faithful Reasoning publication">
+        <img src="assets/tpot-attack-map.png" alt="T-Pot Honeypot">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://openreview.net/pdf?id=NJNr5KbW3m" class="publication-link">
-                Mapping Faithful Reasoning in Language Models
+            <a href="https://github.com/chalithah/tpot-honeypot-analysis" class="publication-link">
+                Cloud Threat Intel: T-Pot Honeypot Analysis
             </a>
         </h3>
-        <div class="publication-venue">NeurIPS 2025 Mech Interp Workshop</div>
-        <div class="publication-authors">Jiazheng Li, Andreas Damianou, J Rosser, José Luis Redondo García, Konstantina Palla</div>
+        <div class="publication-venue">T-Pot · Elastic Stack (ELK) · Kibana</div>
         <div class="publication-year">2025</div>
+        <div class="publication-description">
+            Deployed high-interaction honeypot on Vultr cloud to capture 4+ million real-world cyberattacks over 30 days. Analyzed global threat patterns using Elastic Stack, identifying credential stuffing campaigns, C2 callbacks, and exploit attempts targeting SSH/FTP/HTTP. Documented top attacker ASNs, common credentials, and malicious payloads for threat intelligence enrichment.
+        </div>
         <div class="publication-tags">
-            <span class="tag tag-safety">Mechanistic Interpretability</span>
-            <a href="https://openreview.net/pdf?id=NJNr5KbW3m" class="tag tag-arxiv">ARXIV</a>
+            <span class="tag tag-safety">Threat Intelligence</span>
+            <span class="tag tag-interpretability">Big Data Analysis</span>
+            <a href="https://github.com/chalithah/tpot-honeypot-analysis" class="tag tag-github">GITHUB</a>
         </div>
     </div>
 </div>
