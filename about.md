@@ -28,12 +28,8 @@
 </div>
 
 
+I am a Master’s student in Cybersecurity at NYU Tandon and a Blue Team practitioner focused on SOC Automation, Detection Engineering, and Cloud Security.
 
-[Write your bio here. Talk about your education, work experience, interests, and what you're currently doing.]
+By day, I work in Healthcare IT Operations, securing endpoints with CrowdStrike Falcon and managing HIPAA-compliant infrastructure across AWS and Microsoft 365. By night, I engineer custom SOC pipelines and cloud-native detection labs to bridge the gap between theoretical defense and real-world application.
 
-For example:
-I'm a software developer passionate about [your interests]. Currently working on [current projects/role].
-
-Previously, I've worked at [companies/projects] where I [accomplishments].
-
-In my free time, I enjoy [hobbies/interests].
+I don't just study security; I build it. Below are the projects where I put that theory into practice.
