@@ -27,6 +27,30 @@
 
 <div class="publication-card">
     <div class="publication-image">
+        <img src="assets/detection-lab-network.png" alt="Detection Engineering Lab">
+    </div>
+    <div class="publication-content">
+        <h3 class="publication-title">
+            <a href="https://github.com/chalithah/detection-engineering-lab" class="publication-link">
+                Enterprise Detection & Adversary Emulation Lab
+            </a>
+        </h3>
+        <div class="publication-venue">Splunk · Zeek · Suricata · MITRE ATT&CK</div>
+        <div class="publication-year">2025</div>
+        <div class="publication-description">
+            Adversary emulation lab with Splunk SIEM, pfSense firewall, Zeek/Suricata IDS, and Active Directory. Developed detection engineering capabilities for network reconnaissance (T1046), C2 callbacks (T1059.001), and persistence mechanisms (T1136.001). Features high-fidelity logging with Sysmon and network security monitoring mapped to MITRE ATT&CK framework.
+        </div>
+        <div class="publication-tags">
+            <span class="tag tag-safety">Detection Engineering</span>
+            <span class="tag tag-interpretability">Threat Hunting</span>
+            <a href="https://github.com/chalithah/detection-engineering-lab" class="tag tag-github">GITHUB</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="publication-card">
+    <div class="publication-image">
         <img src="assets/AgentBreederDiagramJPG.jpg" alt="AgentBreeder publication">
     </div>
     <div class="publication-content">
