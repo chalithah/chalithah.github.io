@@ -27,7 +27,7 @@
   <div class="timeline-item">
     <span class="timeline-dot"></span>
     <div class="timeline-header">
-      <span class="timeline-org">UChicago Medicine</span>
+      <span class="timeline-org">The University of Chicago Medicine</span>
       <span class="timeline-role">Program Administrator</span>
       <span class="timeline-dates">Mar 2023 – Aug 2023</span>
     </div>
@@ -43,7 +43,6 @@
       <span class="timeline-dates">Sep 2021 – May 2022</span>
     </div>
     <div class="timeline-meta">Cheltenham, United Kingdom • First Class Honours</div>
-    <div class="timeline-desc">Direct entry based on prior engineering degree. Focused on network security, ethical hacking, and security operations.</div>
   </div>
 
   <div class="timeline-item">
