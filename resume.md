@@ -40,7 +40,7 @@
     <div class="timeline-header">
       <span class="timeline-org">University of Gloucestershire</span>
       <span class="timeline-role">Bachelor of Science in Cybersecurity</span>
-      <span class="timeline-dates">Sep 2021 – May 2022</span>
+      <span class="timeline-dates">Sep 2019 – Mar 2021</span>
     </div>
     <div class="timeline-meta">Cheltenham, United Kingdom • First Class Honours</div>
   </div>
@@ -50,7 +50,7 @@
     <div class="timeline-header">
       <span class="timeline-org">University of Sunderland</span>
       <span class="timeline-role">Bachelor of Engineering in Mechanical Engineering</span>
-      <span class="timeline-dates">Sep 2017 – May 2019</span>
+      <span class="timeline-dates">Sep 2017 – Aug 2019</span>
     </div>
     <div class="timeline-meta">Sunderland, United Kingdom</div>
   </div>
