@@ -38,7 +38,8 @@
         <div class="publication-venue">Splunk · Zeek · Suricata · MITRE ATT&CK</div>
         <div class="publication-year">2025</div>
         <div class="publication-description">
-            Adversary emulation lab with Splunk SIEM, pfSense firewall, Zeek/Suricata IDS, and Active Directory. Developed detection engineering capabilities for network reconnaissance (T1046), C2 callbacks (T1059.001), and persistence mechanisms (T1136.001). Features high-fidelity logging with Sysmon and network security monitoring mapped to MITRE ATT&CK framework.
+            Built a complete SOC infrastructure to simulate and detect real-world adversary tradecraft. I engineered a segmented network with Active Directory and pfSense, then executed attacks (C2 Beaconing, Persistence, Recon) mapped to the MITRE ATT&CK framework.
+Outcome: Developed high-fidelity Splunk detections by correlating Sysmon endpoint telemetry with Zeek/Suricata network data, proving the ability to detect threats that bypass standard logging.
         </div>
         <div class="publication-tags">
             <span class="tag tag-safety">Detection Engineering</span>
