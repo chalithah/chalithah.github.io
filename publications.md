@@ -15,9 +15,8 @@
         <div class="publication-venue">arXiv preprint (cs.CR, cs.LG) · NYU Tandon CS-GY 6813</div>
         <div class="publication-year">2026</div>
         <div class="publication-description">
-            Published research (<strong>arXiv:2601.06612</strong>) tackling <strong>cross-border data privacy risks</strong> in <strong>LLMs and IoT systems</strong> under conflicting regimes (<strong>EU GDPR</strong> vs. <strong>China PIPL</strong>). Designed a <strong>Jurisdiction-Aware, Privacy-by-Design</strong> architecture combining <strong>localized encryption</strong>, <strong>differential privacy</strong>, and <strong>zero-knowledge cryptographic proofs</strong> for real-time compliance.
-            <br><br>
-            <strong>Outcome:</strong> Cut unauthorized data exposure to <strong>&lt;5%</strong>, achieved <strong>zero compliance violations</strong>, and retained <strong>90%+ model utility</strong> in multi-jurisdictional simulation.
+            Published research (arXiv:2601.06612) tackling cross-border data privacy risks in LLMs and IoT systems under conflicting regimes (EU GDPR vs. China PIPL). Designed a Jurisdiction-Aware, Privacy-by-Design architecture combining localized encryption, differential privacy, and zero-knowledge cryptographic proofs for real-time compliance.
+            Outcome: Cut unauthorized data exposure to under 5%, achieved zero compliance violations, and retained 90%+ model utility in multi-jurisdictional simulation.
         </div>
         <div class="publication-tags">
             <span class="tag tag-safety">AI Security</span>
@@ -30,7 +29,6 @@
         </div>
     </div>
 </div>
-
 ## 2025
 
 <div class="publication-card">
