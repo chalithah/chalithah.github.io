@@ -1,5 +1,33 @@
 # Projects
 
+## 2026
+ 
+<div class="publication-card">
+    <div class="publication-image">
+        <img src="assets/Cross-Border%20Data%20Security%20and%20Privacy%20Risks%20in%20Large%20Language%20Models%20and%20IoT%20Systems.png" alt="Cross-Border Data Security and Privacy Risks in Large Language Models and IoT Systems - arXiv preprint">
+    </div>
+    <div class="publication-content">
+        <h3 class="publication-title">
+            <a href="https://arxiv.org/abs/2601.06612" class="publication-link">
+                Cross-Border Data Security and Privacy Risks in Large Language Models and IoT Systems
+            </a>
+        </h3>
+        <div class="publication-venue">arXiv preprint (cs.CR, cs.LG) · NYU Tandon CS-GY 6813</div>
+        <div class="publication-year">2026</div>
+        <div class="publication-description">
+            Peer-reviewed research (arXiv:2601.06612) addressing cross-border data security and privacy risks in Large Language Models (LLMs) and Internet of Things (IoT) systems operating across conflicting legal regimes such as the EU GDPR and China's PIPL. Proposes a Jurisdiction-Aware, Privacy-by-Design architecture that integrates localized encryption, adaptive differential privacy, and real-time compliance assertion via cryptographic proofs (zero-knowledge proofs) to mitigate model memorization and unauthorized data exposure. Empirical multi-jurisdictional simulation reduced unauthorized data exposure to under 5%, achieved zero compliance violations, and maintained model utility above 90% with limited computational overhead — demonstrating feasible, proactive controls for secure and globally compliant AI deployment.
+        </div>
+        <div class="publication-tags">
+            <span class="tag tag-safety">LLM Security</span>
+            <span class="tag tag-safety">IoT Privacy</span>
+            <span class="tag tag-interpretability">GDPR & PIPL Compliance</span>
+            <span class="tag tag-interpretability">Differential Privacy</span>
+            <span class="tag tag-interpretability">Cryptographic Proofs</span>
+            <a href="https://arxiv.org/abs/2601.06612" class="tag tag-github">arXiv</a>
+        </div>
+    </div>
+</div>
+
 ## 2025
 
 <div class="publication-card">
