@@ -1,37 +1,6 @@
-# Projects
+# Selected Work
 
-## 2026
- 
-<div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/Cross-Border%20Data%20Security%20and%20Privacy%20Risks%20in%20Large%20Language%20Models%20and%20IoT%20Systems.png" alt="Cross-Border Data Security and Privacy Risks in Large Language Models and IoT Systems - arXiv preprint">
-    </div>
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://arxiv.org/abs/2601.06612" class="publication-link">
-                Cross-Border Data Security and Privacy Risks in LLMs & IoT Systems
-            </a>
-        </h3>
-        <div class="publication-venue">arXiv preprint (cs.CR, cs.LG) · NYU Tandon CS-GY 6813</div>
-        <div class="publication-year">2026</div>
-        <div class="publication-description">
-            Published research (arXiv:2601.06612) tackling cross-border data privacy risks in LLMs and IoT systems under conflicting regimes (EU GDPR vs. China PIPL). Designed a Jurisdiction-Aware, Privacy-by-Design architecture combining localized encryption, differential privacy, and zero-knowledge cryptographic proofs for real-time compliance.
-            Outcome: Cut unauthorized data exposure to under 5%, achieved zero compliance violations, and retained 90%+ model utility in multi-jurisdictional simulation.
-        </div>
-        <div class="publication-tags">
-            <span class="tag tag-safety">AI Security</span>
-            <span class="tag tag-safety">LLM Security</span>
-            <span class="tag tag-safety">IoT Privacy</span>
-            <span class="tag tag-interpretability">GDPR & PIPL</span>
-            <span class="tag tag-interpretability">Differential Privacy</span>
-            <span class="tag tag-interpretability">Zero-Knowledge Proofs</span>
-            <a href="https://arxiv.org/abs/2601.06612" class="tag tag-github">arXiv</a>
-        </div>
-    </div>
-</div>
-## 2025
-
-<div class="publication-card">
+<div class="publication-card is-feature feature-01">
     <div class="publication-image">
         <img src="assets/n8n-workflow.png" alt="SOC Automation Project">
     </div>
@@ -54,7 +23,7 @@
     </div>
 </div>
 
-<div class="publication-card">
+<div class="publication-card is-feature feature-02">
     <div class="publication-image">
         <img src="assets/detection-lab-network.png" alt="Detection Engineering Lab">
     </div>
@@ -78,7 +47,9 @@ Outcome: Developed high-fidelity Splunk detections by correlating Sysmon endpoin
     </div>
 </div>
 
-<div class="publication-card">
+<div class="support-grid">
+
+<div class="publication-card is-support">
     <div class="publication-image">
         <img src="assets/aws-waf-architecture.png" alt="AWS WAF DDoS Mitigation">
     </div>
@@ -101,7 +72,7 @@ Outcome: Developed high-fidelity Splunk detections by correlating Sysmon endpoin
     </div>
 </div>
 
-<div class="publication-card">
+<div class="publication-card is-support">
     <div class="publication-image">
         <img src="assets/splunk-claude-mcp.png" alt="AI Security Analyst">
     </div>
@@ -124,7 +95,7 @@ Outcome: Developed high-fidelity Splunk detections by correlating Sysmon endpoin
     </div>
 </div>
 
-<div class="publication-card">
+<div class="publication-card is-support">
     <div class="publication-image">
         <img src="assets/tpot-attack-map.png" alt="T-Pot Honeypot">
     </div>
@@ -145,4 +116,6 @@ Outcome: Developed high-fidelity Splunk detections by correlating Sysmon endpoin
             <a href="https://github.com/chalithah/T-Pot-Honeypot-Cloud-Deployment" class="tag tag-github">GITHUB</a>
         </div>
     </div>
+</div>
+
 </div>

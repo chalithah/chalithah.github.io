@@ -134,6 +134,14 @@ class SmoothScroll {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
+
+                // Bare "#" (the logo) scrolls back to the top of the page
+                if (targetId === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    history.pushState(null, null, window.location.pathname + window.location.search);
+                    return;
+                }
+
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
@@ -260,7 +268,7 @@ class LazyImageLoader {
 // Markdown content loader
 class MarkdownLoader {
     constructor() {
-        this.sections = ['about', 'news', 'publications', 'resume'];
+        this.sections = ['about', 'publications', 'building', 'research', 'experience', 'education', 'credentials'];
         this.init();
     }
 
@@ -292,9 +300,26 @@ class MarkdownLoader {
                     const markdown = await response.text();
                     const html = this.parseMarkdown(markdown);
                     contentElement.innerHTML = html;
-                    // Apply hover effect to new content
-                    if (typeof window.applyBHoverEffect === 'function') {
-                        window.applyBHoverEffect(contentElement);
+                    // Above-the-fold profile image should load eagerly
+                    const avatar = contentElement.querySelector('.about-avatar');
+                    if (avatar) {
+                        avatar.setAttribute('loading', 'eager');
+                    }
+                    // Résumé link: only show if the PDF actually exists
+                    const resumeLink = contentElement.querySelector('.resume-link');
+                    if (resumeLink) {
+                        fetch(resumeLink.getAttribute('href'), { method: 'HEAD' })
+                            .then((res) => {
+                                if (res.ok) {
+                                    resumeLink.hidden = false;
+                                    resumeLink.style.display = 'inline-flex';
+                                }
+                            })
+                            .catch(() => { /* keep hidden */ });
+                    }
+                    // Apply subtle reveal transitions to new content (interface only)
+                    if (typeof window.applyRevealEffect === 'function') {
+                        window.applyRevealEffect(contentElement);
                     }
                     console.log(`Successfully loaded ${section} from: ${fullPath}`);
                     return; // Success, exit early
@@ -318,10 +343,6 @@ class MarkdownLoader {
                 <p><small>Tried paths: ${pathsToTry.join(', ')}</small></p>
             </div>
         `;
-        // Apply hover effect to error content
-        if (typeof window.applyBHoverEffect === 'function') {
-            window.applyBHoverEffect(contentElement);
-        }
     }
 
     parseMarkdown(markdown) {
@@ -369,111 +390,185 @@ class MarkdownLoader {
     }
 }
 
-// Hover effect for letter 'b' and 'B'
-(function() {
-    function applyBHoverEffect(root) {
-        const targetRoot = root || document.body;
-        if (!targetRoot) return;
-
-        const walker = document.createTreeWalker(
-            targetRoot,
-            NodeFilter.SHOW_TEXT,
-            {
-                acceptNode(node) {
-                    const value = node.nodeValue;
-                    if (!value || (value.indexOf('b') === -1 && value.indexOf('B') === -1)) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    const parent = node.parentNode;
-                    if (!parent) return NodeFilter.FILTER_REJECT;
-                    const tag = parent.nodeName;
-                    if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT') {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    if (parent.classList && parent.classList.contains('hover-b')) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    return NodeFilter.FILTER_ACCEPT;
-                }
-            }
-        );
-
-        const nodesToProcess = [];
-        let current;
-        while ((current = walker.nextNode())) {
-            nodesToProcess.push(current);
+// Accessible lightbox for photography (opens only for loaded photos)
+class PhotoLightbox {
+    constructor() {
+        this.lightbox = document.getElementById('lightbox');
+        this.image = this.lightbox ? this.lightbox.querySelector('.lightbox-image') : null;
+        this.closeButton = this.lightbox ? this.lightbox.querySelector('.lightbox-close') : null;
+        this.lastFocused = null;
+        if (this.lightbox && this.image && this.closeButton) {
+            this.init();
         }
+    }
 
-        nodesToProcess.forEach((textNode) => {
-            const text = textNode.nodeValue;
-            const fragment = document.createDocumentFragment();
-            let buffer = '';
-
-            for (let i = 0; i < text.length; i++) {
-                const ch = text[i];
-                if (ch === 'b' || ch === 'B') {
-                    if (buffer) {
-                        fragment.appendChild(document.createTextNode(buffer));
-                        buffer = '';
-                    }
-                    const span = document.createElement('span');
-                    span.className = 'hover-b';
-                    span.textContent = ch;
-                    fragment.appendChild(span);
-                } else {
-                    buffer += ch;
+    init() {
+        // Delegate clicks from any loaded photo (gallery + hero)
+        document.addEventListener('click', (e) => {
+            const figure = e.target.closest('.photo-item.has-photo, .hero-photo.has-photo');
+            if (figure) {
+                const img = figure.querySelector('img');
+                if (img && img.src) {
+                    this.open(img);
                 }
+                return;
             }
 
-            if (buffer) {
-                fragment.appendChild(document.createTextNode(buffer));
+            // Close when clicking the backdrop (not the image)
+            if (!this.lightbox.hidden && e.target === this.lightbox) {
+                this.close();
             }
+        });
 
-            if (textNode.parentNode) {
-                textNode.parentNode.replaceChild(fragment, textNode);
+        // Keyboard access: open with Enter/Space when a photo is focused
+        document.querySelectorAll('.photo-item, .hero-photo').forEach((figure) => {
+            figure.addEventListener('keydown', (e) => {
+                if ((e.key === 'Enter' || e.key === ' ') && figure.classList.contains('has-photo')) {
+                    e.preventDefault();
+                    const img = figure.querySelector('img');
+                    if (img && img.src) this.open(img);
+                }
+            });
+        });
+
+        this.closeButton.addEventListener('click', () => this.close());
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !this.lightbox.hidden) {
+                this.close();
+            }
+            // Arrow-key navigation between loaded photographs
+            if ((e.key === 'ArrowRight' || e.key === 'ArrowLeft') && !this.lightbox.hidden) {
+                e.preventDefault();
+                this.step(e.key === 'ArrowRight' ? 1 : -1);
+            }
+            // Simple focus trap while open
+            if (e.key === 'Tab' && !this.lightbox.hidden) {
+                e.preventDefault();
+                this.closeButton.focus();
             }
         });
     }
 
-    window.applyBHoverEffect = applyBHoverEffect;
-})();
-
-// Bee spawning when clicking on a 'b'/'B'
-(function() {
-    function spawnBeeFromElement(el) {
-        const rect = el.getBoundingClientRect();
-        const startX = rect.left + rect.width / 2;
-        const startY = rect.top + rect.height / 2;
-
-        const bee = document.createElement('div');
-        bee.className = 'flying-bee';
-        bee.textContent = '🐝';
-        bee.style.left = startX + 'px';
-        bee.style.top = startY + 'px';
-
-        // Random off-screen direction
-        const angle = Math.random() * Math.PI * 2;
-        const distance = Math.max(window.innerWidth, window.innerHeight) + 200;
-        const dx = Math.cos(angle) * distance;
-        const dy = Math.sin(angle) * distance;
-        bee.style.setProperty('--dx', dx + 'px');
-        bee.style.setProperty('--dy', dy + 'px');
-
-        document.body.appendChild(bee);
-
-        const cleanup = () => {
-            if (bee && bee.parentNode) bee.parentNode.removeChild(bee);
-        };
-        bee.addEventListener('animationend', cleanup, { once: true });
-        setTimeout(cleanup, 4000);
+    open(img) {
+        this.lastFocused = document.activeElement;
+        this.gallery = Array.from(document.querySelectorAll('.photo-item.has-photo img, .hero-photo.has-photo img'));
+        this.index = this.gallery.indexOf(img);
+        this.show(img);
+        this.lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+        this.closeButton.focus();
     }
 
-    document.addEventListener('click', (e) => {
-        const target = e.target;
-        if (target && target.classList && target.classList.contains('hover-b')) {
-            spawnBeeFromElement(target);
+    show(img) {
+        this.image.src = img.src;
+        this.image.alt = img.alt || '';
+    }
+
+    step(dir) {
+        if (!this.gallery || this.gallery.length < 2) return;
+        this.index = (this.index + dir + this.gallery.length) % this.gallery.length;
+        this.show(this.gallery[this.index]);
+    }
+
+    close() {
+        this.lightbox.hidden = true;
+        this.image.removeAttribute('src');
+        document.body.style.overflow = '';
+        if (this.lastFocused && typeof this.lastFocused.focus === 'function') {
+            this.lastFocused.focus();
         }
+    }
+}
+
+// Make loaded photos keyboard-focusable
+(function() {
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.photo-item img, .hero-photo img').forEach((img) => {
+            const enable = () => {
+                const figure = img.closest('figure');
+                if (figure) {
+                    figure.setAttribute('tabindex', '0');
+                    figure.setAttribute('role', 'button');
+                    figure.setAttribute('aria-label', 'View photograph');
+                }
+            };
+            if (img.complete && img.naturalWidth > 0) {
+                enable();
+            } else {
+                img.addEventListener('load', enable);
+            }
+        });
     });
+})();
+
+// Photography placeholders: swap data-src → src immediately on load.
+// The inline onload/onerror handlers flag each figure as has-photo or
+// is-missing (dashed slot with the expected filename).
+(function() {
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.photo-item img[data-src], .hero-photo img[data-src]').forEach((img) => {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+        });
+    });
+})();
+
+// Subtle reveal-on-scroll transitions (interface only, motion-safe).
+// Fail-safe: elements stay visible by default; the hidden state is applied
+// only right before observing, and a timed fallback force-reveals everything
+// in case IntersectionObserver never fires (some embedded contexts).
+(function() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let observer = null;
+
+    function getObserver() {
+        if (observer) return observer;
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        return observer;
+    }
+
+    function applyRevealEffect(root) {
+        if (!root || prefersReducedMotion.matches || !('IntersectionObserver' in window)) return;
+        const targets = root.querySelectorAll('.publication-card, .timeline-item, .wip-card, .cred-row');
+        targets.forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = Math.min(i * 40, 200) + 'ms';
+            getObserver().observe(el);
+        });
+        // Fail-safe: if within 1s an element hasn't been revealed by the
+        // observer, drop the hidden .reveal state entirely — the element
+        // returns to default visible styles with no transition required.
+        setTimeout(() => {
+            targets.forEach((el) => {
+                if (!el.classList.contains('reveal-in')) {
+                    getObserver().unobserve(el);
+                    el.classList.remove('reveal');
+                    el.style.transitionDelay = '';
+                }
+            });
+        }, 1000);
+    }
+
+    window.applyRevealEffect = applyRevealEffect;
+})();
+
+// Header background transition on scroll
+(function() {
+    function updateHeaderState() {
+        const header = document.getElementById('main-header');
+        if (!header) return;
+        header.classList.toggle('scrolled', window.scrollY > 8);
+    }
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    document.addEventListener('DOMContentLoaded', updateHeaderState);
 })();
 
 // Initialize all functionality when DOM is loaded
@@ -488,21 +583,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     new LazyImageLoader();
     new MarkdownLoader();
-    
-    // Apply hover effect to all 'b' letters on initial content
-    if (typeof window.applyBHoverEffect === 'function') {
-        window.applyBHoverEffect(document.body);
-    }
-
-    // Initialize party hat explosion feature
-    new PartyHatExplosion();
+    new PhotoLightbox();
     
     // Add loading state management
     document.body.classList.add('loaded');
     
     // Console message for developers
     console.log('🌵 Portfolio site loaded successfully!');
-    console.log('🎉 Click the logo for a party surprise!');
     console.log('Built with inspiration from astro-theme-cactus');
 });
 
@@ -526,190 +613,6 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
-
-// Party Hat Explosion Feature
-class PartyHatExplosion {
-    constructor() {
-        this.isAnimating = false;
-        this.init();
-    }
-
-    init() {
-        // Find the logo link and add click handler
-        const logoLink = document.querySelector('#main-header a[href="#"]');
-        if (logoLink) {
-            logoLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.triggerExplosion();
-            });
-        }
-    }
-
-    triggerExplosion() {
-        // Check if user prefers reduced motion
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (prefersReducedMotion) {
-            // Just do a simple pulse for users who prefer reduced motion
-            const logoSvg = document.querySelector('#main-header svg');
-            if (logoSvg) {
-                logoSvg.classList.add('logo-party-pulse');
-                setTimeout(() => {
-                    logoSvg.classList.remove('logo-party-pulse');
-                }, 600);
-            }
-            return;
-        }
-        
-        // Get logo position for explosion origin
-        const logoSvg = document.querySelector('#main-header svg');
-        if (!logoSvg) return;
-        
-        const logoRect = logoSvg.getBoundingClientRect();
-        const centerX = logoRect.left + logoRect.width / 2;
-        const centerY = logoRect.top + logoRect.height / 2;
-        const explosionId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-        
-        // Add pulse animation to logo
-        logoSvg.classList.add('logo-party-pulse');
-        
-        // Create party hats explosion
-        this.createPartyHats(centerX, centerY, explosionId);
-        
-        // Create sparkles
-        this.createSparkles(centerX, centerY, explosionId);
-        
-        // Clean up after animation
-        setTimeout(() => {
-            logoSvg.classList.remove('logo-party-pulse');
-            // Clean up any remaining elements for this explosion only
-            this.cleanupExplosionElements(explosionId);
-        }, 2500);
-    }
-
-    cleanupExplosionElements(explosionId) {
-        // Remove any remaining party hats for this explosion
-        const remainingHats = document.querySelectorAll(`.party-hat[data-explosion="${explosionId}"]`);
-        remainingHats.forEach(hat => {
-            if (hat.parentNode) {
-                hat.parentNode.removeChild(hat);
-            }
-        });
-        
-        // Remove any remaining sparkles for this explosion
-        const remainingSparkles = document.querySelectorAll(`.party-sparkle[data-explosion="${explosionId}"]`);
-        remainingSparkles.forEach(sparkle => {
-            if (sparkle.parentNode) {
-                sparkle.parentNode.removeChild(sparkle);
-            }
-        });
-    }
-
-    createPartyHats(centerX, centerY, explosionId) {
-        const hatCount = 12; // Number of party hats to create
-        const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd'];
-        
-        for (let i = 0; i < hatCount; i++) {
-            const hat = document.createElement('div');
-            hat.className = 'party-hat';
-            hat.setAttribute('data-explosion', explosionId);
-            
-            // Create party hat SVG
-            hat.innerHTML = this.getPartyHatSVG(colors[i % colors.length]);
-            
-            // Calculate explosion direction
-            const angle = (360 / hatCount) * i;
-            const radian = (angle * Math.PI) / 180;
-            const distance = 150 + Math.random() * 100; // Random distance between 150-250px
-            
-            const targetX = centerX + Math.cos(radian) * distance;
-            const targetY = centerY + Math.sin(radian) * distance;
-            
-            // Set initial position
-            hat.style.left = centerX + 'px';
-            hat.style.top = centerY + 'px';
-            
-            // Add to DOM
-            document.body.appendChild(hat);
-            
-            // Trigger animation with slight delay for staggered effect
-            setTimeout(() => {
-                hat.classList.add('exploding');
-                hat.style.left = targetX + 'px';
-                hat.style.top = targetY + 'px';
-                hat.style.transition = 'left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            }, i * 50);
-            
-            // Clean up after animation
-            setTimeout(() => {
-                if (hat.parentNode) {
-                    hat.parentNode.removeChild(hat);
-                }
-            }, 2500);
-        }
-    }
-
-    createSparkles(centerX, centerY, explosionId) {
-        const sparkleCount = 20;
-        
-        for (let i = 0; i < sparkleCount; i++) {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'party-sparkle';
-            sparkle.setAttribute('data-explosion', explosionId);
-            
-            // Random colors for sparkles
-            const hue = Math.random() * 360;
-            sparkle.style.background = `hsl(${hue}, 70%, 60%)`;
-            
-            // Calculate explosion direction
-            const angle = Math.random() * 360;
-            const radian = (angle * Math.PI) / 180;
-            const distance = 80 + Math.random() * 120;
-            
-            const targetX = centerX + Math.cos(radian) * distance;
-            const targetY = centerY + Math.sin(radian) * distance;
-            
-            // Set initial position
-            sparkle.style.left = centerX + 'px';
-            sparkle.style.top = centerY + 'px';
-            
-            // Add to DOM
-            document.body.appendChild(sparkle);
-            
-            // Trigger animation with slight delay
-            setTimeout(() => {
-                sparkle.classList.add('exploding');
-                sparkle.style.left = targetX + 'px';
-                sparkle.style.top = targetY + 'px';
-                sparkle.style.transition = 'left 1.5s ease-out, top 1.5s ease-out';
-            }, i * 30);
-            
-            // Clean up after animation
-            setTimeout(() => {
-                if (sparkle.parentNode) {
-                    sparkle.parentNode.removeChild(sparkle);
-                }
-            }, 2000);
-        }
-    }
-
-    getPartyHatSVG(color) {
-        return `
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Party hat triangle -->
-                <path d="M50 10 L20 80 L80 80 Z" fill="${color}" stroke="#333" stroke-width="2"/>
-                <!-- Hat brim -->
-                <ellipse cx="50" cy="80" rx="30" ry="8" fill="#333"/>
-                <!-- Decorative stripes -->
-                <path d="M25 35 L75 35" stroke="white" stroke-width="2" opacity="0.8"/>
-                <path d="M30 50 L70 50" stroke="white" stroke-width="2" opacity="0.8"/>
-                <path d="M35 65 L65 65" stroke="white" stroke-width="2" opacity="0.8"/>
-                <!-- Pom-pom on top -->
-                <circle cx="50" cy="10" r="6" fill="white" stroke="#333" stroke-width="1"/>
-                <circle cx="50" cy="10" r="3" fill="${color}"/>
-            </svg>
-        `;
-    }
-}
 
 // Add reduced motion support
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
