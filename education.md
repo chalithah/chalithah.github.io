@@ -7,7 +7,7 @@
     <div class="timeline-header">
       <span class="timeline-org">New York University</span>
       <span class="timeline-role">Master of Science in Cybersecurity</span>
-      <span class="timeline-dates">Aug 2025 – Aug <strong class="text-accent">2027</strong></span>
+      <span class="timeline-dates">Aug 2025 – May <strong class="text-accent">2027</strong></span>
     </div>
     <div class="timeline-meta">New York, NY • In Progress</div>
     <div class="timeline-desc">Specializing in Security Operations, Cloud Security, and Threat Detection Engineering.</div>
