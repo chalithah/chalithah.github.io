@@ -43,7 +43,7 @@
     <span class="timeline-dot"></span>
     <div class="timeline-header">
       <span class="timeline-org">Ceylon Steel Corporation</span>
-      <span class="timeline-role">Technical Project Engineer</span>
+      <span class="timeline-role">Technical Engineer</span>
       <span class="timeline-dates">Oct 2017 – Jun 2021</span>
     </div>
     <div class="timeline-meta">Sri Lanka • 3 yrs 9 mos</div>
