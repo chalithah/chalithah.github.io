@@ -12,12 +12,12 @@
     <div class="timeline-meta">Chicago, IL • Hybrid</div>
     <div class="timeline-desc">
       <ul>
-        <li>Sole REDCap system administrator for a HIPAA-regulated research center — deployed and operate the production platform on AWS (CloudFormation, EC2, S3), giving the center clinical data capture infrastructure independent of institutional systems.</li>
-        <li>Mitigated an active DDoS campaign against the production REDCap application by deploying AWS WAF and Shield with Fortinet managed rules, blocking OWASP Top 10 exploit attempts including SQLi and XSS.</li>
-        <li>Harden AWS infrastructure via IAM least-privilege policies, CloudTrail logging, S3 encryption, and KMS-backed secrets management.</li>
-        <li>Administer Microsoft 365 for 30+ research staff — account provisioning and deprovisioning, license assignment, MFA enforcement, and conditional access configuration.</li>
-        <li>Deployed CrowdStrike Falcon Go across all center-issued endpoints with scheduled scanning and automated quarantine workflows.</li>
-        <li>Own the IT asset lifecycle from procurement to decommissioning and coordinate infrastructure projects supporting the Center for Advancing Health Equity and the Asian Health Coalition.</li>
+        <!-- <li>Sole REDCap system administrator for a HIPAA-regulated research center — deployed and operate the production platform on AWS (CloudFormation, EC2, S3), giving the center clinical data capture infrastructure independent of institutional systems.</li>
+        <!-- <li>Mitigated an active DDoS campaign against the production REDCap application by deploying AWS WAF and Shield with Fortinet managed rules, blocking OWASP Top 10 exploit attempts including SQLi and XSS.</li> -->
+        <!-- <li>Harden AWS infrastructure via IAM least-privilege policies, CloudTrail logging, S3 encryption, and KMS-backed secrets management.</li> -->
+        <!-- <li>Administer Microsoft 365 for 30+ research staff — account provisioning and deprovisioning, license assignment, MFA enforcement, and conditional access configuration.</li> -->
+        <!-- <li>Deployed CrowdStrike Falcon Go across all center-issued endpoints with scheduled scanning and automated quarantine workflows.</li> -->
+        <!-- <li>Own the IT asset lifecycle from procurement to decommissioning and coordinate infrastructure projects supporting the Center for Advancing Health Equity and the Asian Health Coalition.</li> --> -->
       </ul>
     </div>
   </div>
